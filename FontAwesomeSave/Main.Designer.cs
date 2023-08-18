@@ -44,6 +44,11 @@
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.txtColor = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCorFundo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.imgIco)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.imgIco.Location = new System.Drawing.Point(15, 51);
             this.imgIco.Name = "imgIco";
-            this.imgIco.Size = new System.Drawing.Size(213, 178);
+            this.imgIco.Size = new System.Drawing.Size(213, 148);
             this.imgIco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgIco.TabIndex = 0;
             this.imgIco.TabStop = false;
@@ -73,7 +78,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(146, 310);
+            this.btnSave.Location = new System.Drawing.Point(146, 378);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 34);
             this.btnSave.TabIndex = 2;
@@ -96,16 +101,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIco.Location = new System.Drawing.Point(15, 25);
             this.txtIco.Name = "txtIco";
+            this.txtIco.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtIco.Size = new System.Drawing.Size(182, 20);
             this.txtIco.TabIndex = 4;
-            this.txtIco.Text = "<i class=\"fab fa-fort-awesome-alt\"></i>";
+            this.txtIco.Text = "<i class=\"fa-brands fa-fort-awesome-alt\"></i>";
             this.txtIco.TextChanged += new System.EventHandler(this.txtIco_TextChanged);
             // 
             // txtPath
             // 
             this.txtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPath.Location = new System.Drawing.Point(15, 248);
+            this.txtPath.Location = new System.Drawing.Point(15, 273);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(183, 20);
             this.txtPath.TabIndex = 6;
@@ -114,7 +120,7 @@
             // 
             this.lblPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPath.AutoSize = true;
-            this.lblPath.Location = new System.Drawing.Point(12, 232);
+            this.lblPath.Location = new System.Drawing.Point(12, 257);
             this.lblPath.Name = "lblPath";
             this.lblPath.Size = new System.Drawing.Size(43, 13);
             this.lblPath.TabIndex = 5;
@@ -124,7 +130,7 @@
             // 
             this.lblSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(12, 271);
+            this.lblSize.Location = new System.Drawing.Point(12, 296);
             this.lblSize.Name = "lblSize";
             this.lblSize.Size = new System.Drawing.Size(52, 13);
             this.lblSize.TabIndex = 7;
@@ -135,7 +141,7 @@
             this.pnlColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlColor.BackColor = System.Drawing.Color.Black;
             this.pnlColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlColor.Location = new System.Drawing.Point(109, 324);
+            this.pnlColor.Location = new System.Drawing.Point(88, 349);
             this.pnlColor.Name = "pnlColor";
             this.pnlColor.Size = new System.Drawing.Size(31, 20);
             this.pnlColor.TabIndex = 8;
@@ -146,7 +152,7 @@
             // 
             this.lblColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(12, 310);
+            this.lblColor.Location = new System.Drawing.Point(12, 335);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(23, 13);
             this.lblColor.TabIndex = 9;
@@ -156,7 +162,7 @@
             // 
             this.txtSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSize.Location = new System.Drawing.Point(15, 287);
+            this.txtSize.Location = new System.Drawing.Point(15, 312);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(213, 20);
             this.txtSize.TabIndex = 10;
@@ -166,7 +172,7 @@
             // 
             this.btnFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnFolder.Image")));
-            this.btnFolder.Location = new System.Drawing.Point(204, 245);
+            this.btnFolder.Location = new System.Drawing.Point(204, 270);
             this.btnFolder.Name = "btnFolder";
             this.btnFolder.Size = new System.Drawing.Size(25, 23);
             this.btnFolder.TabIndex = 11;
@@ -177,18 +183,84 @@
             // 
             this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtColor.Location = new System.Drawing.Point(15, 324);
+            this.txtColor.Location = new System.Drawing.Point(15, 349);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(91, 20);
+            this.txtColor.Size = new System.Drawing.Size(67, 20);
             this.txtColor.TabIndex = 12;
             this.txtColor.Text = "#000000";
             this.txtColor.TextChanged += new System.EventHandler(this.txtColor_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.DisplayMember = "PNG";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "PNG",
+            "BMP",
+            "JPEG"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 233);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(213, 21);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.Text = "PNG";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 217);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Formato";
+            // 
+            // txtCorFundo
+            // 
+            this.txtCorFundo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorFundo.Location = new System.Drawing.Point(125, 349);
+            this.txtCorFundo.Name = "txtCorFundo";
+            this.txtCorFundo.Size = new System.Drawing.Size(67, 20);
+            this.txtCorFundo.TabIndex = 17;
+            this.txtCorFundo.Text = "#FFFFFF";
+            this.txtCorFundo.TextChanged += new System.EventHandler(this.txtCorFundo_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(122, 335);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Cor de Fundo";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(198, 349);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(31, 20);
+            this.panel1.TabIndex = 15;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 356);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(241, 424);
+            this.Controls.Add(this.txtCorFundo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.btnFolder);
             this.Controls.Add(this.txtSize);
@@ -230,6 +302,11 @@
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
         private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCorFundo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
