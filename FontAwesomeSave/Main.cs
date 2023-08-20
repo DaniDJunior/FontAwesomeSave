@@ -57,10 +57,6 @@ namespace FontAwesomeSave
             if (!string.IsNullOrEmpty(ImageFile) && System.IO.File.Exists(ImageFile))
             {
                 SvgDocument svgDocument = SvgDocument.Open(ImageFile);
-                foreach (ISvgNode item in svgDocument.Nodes)
-                {
-                    
-                }
                 Bitmap bitmap = svgDocument.Draw();
                 //for (int Xcount = 0; Xcount < bitmap.Width; Xcount++)
                 //{
