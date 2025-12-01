@@ -58,16 +58,16 @@ namespace FontAwesomeSave
             {
                 SvgDocument svgDocument = SvgDocument.Open(ImageFile);
                 Bitmap bitmap = svgDocument.Draw();
-                //for (int Xcount = 0; Xcount < bitmap.Width; Xcount++)
-                //{
-                //    for (int Ycount = 0; Ycount < bitmap.Height; Ycount++)
-                //    {
-                //        if (bitmap.GetPixel(Xcount, Ycount).A > 0)
-                //        {
-                //            bitmap.SetPixel(Xcount, Ycount, Color.FromArgb(bitmap.GetPixel(Xcount, Ycount).A, pnlColor.BackColor.R, pnlColor.BackColor.G, pnlColor.BackColor.B));
-                //        }
-                //    }
-                //}
+                for (int Xcount = 0; Xcount < bitmap.Width; Xcount++)
+                {
+                    for (int Ycount = 0; Ycount < bitmap.Height; Ycount++)
+                    {
+                        if (bitmap.GetPixel(Xcount, Ycount).A > 0)
+                        {
+                            bitmap.SetPixel(Xcount, Ycount, Color.FromArgb(bitmap.GetPixel(Xcount, Ycount).A, pnlColor.BackColor.R, pnlColor.BackColor.G, pnlColor.BackColor.B));
+                        }
+                    }
+                }
                 imgIco.Image = bitmap;
             }
         }
